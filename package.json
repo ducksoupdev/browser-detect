@@ -1,0 +1,32 @@
+{
+  "name": "browser-detect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel index.js -o .detect.tmp.js",
+    "postbuild": "webpack .detect.tmp.js -o dist/detect.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@advanced/browser-detect": "1.0.0",
+    "@babel/cli": "7.7.4",
+    "@babel/core": "7.7.4",
+    "@babel/preset-env": "7.7.4"
+  },
+  "devDependencies": {
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10"
+  },
+  "browserslist": [
+    "ie 11"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  }
+}
